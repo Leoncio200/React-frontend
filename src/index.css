@@ -10,9 +10,6 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: url("./Assets/paisaje.png") no-repeat;
   background-size: cover;
