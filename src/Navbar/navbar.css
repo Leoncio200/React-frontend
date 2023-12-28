@@ -10,6 +10,33 @@
     padding: 0 2rem;
 }
 
+
+.navbar .search input {
+    color: #fff;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 15px;
+    padding: 5px 1.5rem 5px 5px;
+    font-size: 1rem;
+}
+
+.navbar .search input::placeholder{
+    color: #fff;
+}
+
+.navbar .search .search-icon {
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    position: absolute;
+    top: 1.4rem;
+    transform: translateX(-140%);
+    cursor: pointer;
+}
+
 .navbar .li{
     list-style: none;
 }
