@@ -1,32 +1,43 @@
 import React, { useState } from 'react'
 import { IoMenu } from "react-icons/io5";
 import { AiOutlineClose } from "react-icons/ai";
+import { FaUserCircle } from "react-icons/fa";
 import "./navbar.css";
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    
+    const navigate = useNavigate();
+
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
 
+    const acountOnClick = () => {
+        navigate('/user');
+    };
+
   return (
     <div className='navbar'>
-        <div className="logo"><a href="#">Japan World</a></div>
+        <div className="logo"><Link to='/' className='li'>Japan World</Link></div>
         <ul className='links'>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contactos</a></li>
-            <li><a href="#">Friends</a></li>
-            <li><a href="#">Carrito</a></li>
+            <Link to='/' className='li'>Home</Link>
+            <Link to='/' className='li'>Contactos</Link>
+            <Link to='/' className='li'>Friends</Link>
+            <Link to='/' className='li'>Carrito</Link>
         </ul>
+        <div onClick={acountOnClick} className='user-btn'>
+            <FaUserCircle />
+        </div>
         <div onClick={toggleDropdown} className={'toggle-btn'}>
             {isOpen ? <AiOutlineClose className='icon'/> : <IoMenu className='icon'/>}
         </div>
         <div className={`dropdown-menu ${isOpen ? 'open' : ''}`}>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contactos</a></li>
-            <li><a href="#">Friends</a></li>
-            <li><a href="#">Carrito</a></li>
+            <Link  to='/' className='li'>Home</Link>
+            <Link  to='/' className='li'>Contactos</Link>
+            <Link  to='/' className='li'>Friends</Link>
+            <Link  to='/' className='li'>Carrito</Link>
+            <Link  to='/' className='acount-btn'>Cuenta</Link>
         </div>
     </div>
   )

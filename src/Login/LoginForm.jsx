@@ -4,7 +4,7 @@ import { FaUser, FaLock } from "react-icons/fa";
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { MI_URL } from '../config';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function LoginForm() {
     
@@ -45,13 +45,13 @@ export default function LoginForm() {
 
                 <div className="remember-forgot">
                     <label><input type="checkbox" />Recordarmelo</label>
-                    <a href="#">Olvido su contraseña?</a>
+                    <Link to="/" className='li'>Olvido su contraseña?</Link>
                 </div>
 
                 <button type='submit'>Login</button>
 
                 <div className="register-link">
-                    <p>No tiene cuenta? <a href="#">Registrarme</a></p>
+                    <p>No tiene cuenta? <Link to="/register" className='li'>Registrarme</Link></p>
                 </div>
             </form>
         </div>
